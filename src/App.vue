@@ -7,9 +7,6 @@
   const MAX=20000;
   const STEP=100;
 
-  function handleChange(e){
-    cantidad.value = Number(e.target.value);
-  }
 
 </script>
 
@@ -24,8 +21,7 @@
         :min="MIN"
         :max="MAX"
         :step="STEP"
-        :value="cantidad"
-        @input="handleChange"
+        v-model.number="cantidad"
       />
       <p>$ {{ cantidad }}</p>
     </div>
