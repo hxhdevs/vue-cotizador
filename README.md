@@ -33,3 +33,6 @@ los componentes de Vue se escriben de dos maneras
 Option API(es para personas que van iniciando y personas con orientacion POO) 
 Composition API(solo si todo el proyecto sera con VueJS)
 # eventos en Vue JS
+# states en Vue JS
+- en vue se usa states con ref o reactive y se importa del siguiente modo
+import {ref,reactive} from 'vue'
