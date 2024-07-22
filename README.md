@@ -32,3 +32,4 @@ los componentes de Vue se escriben de dos maneras
 - Cuando utilizarlos?
 Option API(es para personas que van iniciando y personas con orientacion POO) 
 Composition API(solo si todo el proyecto sera con VueJS)
+# eventos en Vue JS
