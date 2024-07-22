@@ -9,10 +9,9 @@
   });
 
   function handleChange(e){
-    cantidad.value = Number(e.target.value);
+    state.cantidad = Number(e.target.value);
   }
-  console.log(cantidad.value);
-  console.log(state.cantidad);
+
 </script>
 
 <template>
@@ -25,7 +24,7 @@
         class="w-full bg-gray-200 accent-lime-500 hover:accent-lime-600"
         @input="handleChange"
       />
-      {{ cantidad }}
+      {{ state.cantidad }}
     </div>
   </div>
 </template>
