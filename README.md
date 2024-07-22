@@ -25,3 +25,5 @@ npx tailwindcss init -p
 - eso creara los siguientes archivos
 tailwind.config.js
 postcss.config.js
+# Componentes
+- Los componentes son partes reutilizables, utilizan la extension .vue y se pueden pasar informacion con props
