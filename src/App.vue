@@ -2,7 +2,7 @@
   import {ref} from 'vue'
   import Header from './components/Header.vue';
 
-  const cantidad = ref(0);
+  const cantidad = ref(10000);
   const MIN =0;
   const MAX=20000;
   const STEP=100;
@@ -21,10 +21,10 @@
       <input
         type="range"
         class="w-full bg-gray-200 accent-lime-500 hover:accent-lime-600"
-        min="1"
-        max="20000"
-        step="100"
-        value="10000"
+        :min="MIN"
+        :max="MAX"
+        :step="STEP"
+        :value="cantidad"
         @input="handleChange"
       />
       <p>$ {{ cantidad }}</p>
