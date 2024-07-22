@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <h1>Hola Mundo con Vue</h1>
+  <h1 class="text-4xl font-black">Hola Mundo con Vue</h1>
 </template>
 
 <style>

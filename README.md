@@ -17,3 +17,11 @@ npm run dev
 # Single File componente
 - Que es?
 - basicamente es tener script, template y style en un solo archivo en este caso en App.vue
+# instalando tailwindcss en vue
+- en este caso la instalamos como desarrollo
+npm install -D tailwindcss postcss autoprefixer
+- se agrega en automatico en package.json y despues tipeamos
+npx tailwindcss init -p
+- eso creara los siguientes archivos
+tailwind.config.js
+postcss.config.js
