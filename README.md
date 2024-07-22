@@ -27,3 +27,8 @@ tailwind.config.js
 postcss.config.js
 # Componentes
 - Los componentes son partes reutilizables, utilizan la extension .vue y se pueden pasar informacion con props
+# API Styles
+los componentes de Vue se escriben de dos maneras 
+- Cuando utilizarlos?
+Option API(es para personas que van iniciando y personas con orientacion POO) 
+Composition API(solo si todo el proyecto sera con VueJS)
