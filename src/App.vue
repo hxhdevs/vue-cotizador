@@ -1,5 +1,5 @@
 <script setup>
-  import {ref} from 'vue'
+  import {computed, ref} from 'vue'
   import Header from './components/Header.vue';
 
   const cantidad = ref(10000);
@@ -7,6 +7,13 @@
   const MAX=20000;
   const STEP=100;
 
+  const formatearDinero=computed(() =>{
+    const formatter = new Intl.NumberFormat('en-US',{
+      style:'currency',
+      currency:'USD'
+    })
+    return formatter.format(cantidad.value);
+  })
 
 </script>
 
@@ -23,7 +30,7 @@
         :step="STEP"
         v-model.number="cantidad"
       />
-      <p>$ {{ cantidad }}</p>
+      <p class="text-center my-10 text-5xl font-extrabold text-indigo-600">{{formatearDinero}}</p>
     </div>
   </div>
 </template>
