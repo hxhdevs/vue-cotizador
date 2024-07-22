@@ -3,6 +3,9 @@
   import Header from './components/Header.vue';
 
   const cantidad = ref(0);
+  const MIN =0;
+  const MAX=20000;
+  const STEP=100;
 
   function handleChange(e){
     cantidad.value = Number(e.target.value);
@@ -18,11 +21,13 @@
       <input
         type="range"
         class="w-full bg-gray-200 accent-lime-500 hover:accent-lime-600"
+        min="1"
+        max="20000"
+        step="100"
+        value="10000"
         @input="handleChange"
       />
       <p>$ {{ cantidad }}</p>
-      <p v-text="`$ ${cantidad}`"></p>
-      <p v-html="`$ ${cantidad}`"></p>
     </div>
   </div>
 </template>
