@@ -2,9 +2,11 @@
   import {computed, ref} from 'vue'
   import Header from './components/Header.vue';
   import Button from './components/Button.vue';
+  import {calcularTotalPagar} from './Helpers/index'
 
   const cantidad = ref(10000);
   const meses = ref(6);
+  const total = ref(calcularTotalPagar(cantidad.value,meses.value));
   const MIN =0;
   const MAX=20000;
   const STEP=100;
@@ -81,8 +83,8 @@
             Resumen <span class="text-indigo-600">de pagos</span>
         </h2>
     
-        <p class="text-xl text-gray-500 text-center font-bold">Meses</p>
-        <p class="text-xl text-gray-500 text-center font-bold">Total a pagar</p>
+        <p class="text-xl text-gray-500 text-center font-bold">{{meses}} meses</p>
+        <p class="text-xl text-gray-500 text-center font-bold">Total a pagar: {{total}}</p>
         <p class="text-xl text-gray-500 text-center font-bold">Mensuales</p>
     </div>
   </div>
