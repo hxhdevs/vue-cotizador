@@ -39,3 +39,5 @@ import {ref,reactive} from 'vue'
 # Recordatorio para componentes
 - siempre que veamos componentes del siguiente modo en Vue implica el uso de un evento personalizado
 @fn="handleChangeDecremento"
+# Computed properties 
+- un computed properties no toma argumentos o parametros entonces lo que se hace es convertirlo a un metodo porque si toma argumentos
