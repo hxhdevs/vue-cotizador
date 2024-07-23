@@ -24,6 +24,10 @@
     total.value = calcularTotalPagar(cantidad.value, meses.value)
   },{inmediate:true});
 
+  const pagoMensual = computed(() => {
+    return total.value / meses.value;
+  })
+
   const handleChangeDecremento=()=>{
     const valor = cantidad.value-STEP;
     if (valor<MIN) {
@@ -90,7 +94,7 @@
     
         <p class="text-xl text-gray-500 text-center font-bold">{{meses}} meses</p>
         <p class="text-xl text-gray-500 text-center font-bold">Total a pagar: {{formatearDinero(total)}}</p>
-        <p class="text-xl text-gray-500 text-center font-bold">Mensuales</p>
+        <p class="text-xl text-gray-500 text-center font-bold">Mensuales{{formatearDinero(pagoMensual)}}</p>
     </div>
     <p v-else class="text-center">Añade una cantidad y un plazo a pagar</p>
   </div>
