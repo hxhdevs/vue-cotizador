@@ -16,21 +16,23 @@
     return formatter.format(cantidad.value);
   })
 
-  const handleChangeDecremento=()=>{
+  const handleChangeDecremento=(texto)=>{
     const valor = cantidad.value-STEP;
     if (valor<MIN) {
       alert('Cantidad no valida');
       return
     }
     cantidad.value=valor;
+    console.log(texto)
   }
-  const handleChangeIncremento=()=>{
+  const handleChangeIncremento=(texto)=>{
     const valor = cantidad.value+STEP;
     if (valor>MAX) {
       alert('Cantidad no valida');
       return
     }
     cantidad.value=valor;
+    console.log(texto)
   }
 
 </script>
@@ -41,11 +43,11 @@
     <div class="flex justify-between mt-10">
       <Button
           :operador="'-'"
-          :fn="handleChangeDecremento"
+          @fn="handleChangeDecremento"
         />
       <Button
           :operador="'+'"
-          :fn="handleChangeIncremento"
+          @fn="handleChangeIncremento"
         />
     </div>
 

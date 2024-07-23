@@ -36,3 +36,6 @@ Composition API(solo si todo el proyecto sera con VueJS)
 # states en Vue JS
 - en vue se usa states con ref o reactive y se importa del siguiente modo
 import {ref,reactive} from 'vue'
+# Recordatorio para componentes
+- siempre que veamos componentes del siguiente modo en Vue implica el uso de un evento personalizado
+@fn="handleChangeDecremento"
